@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <meta charset="UTF-8" />
+    <script src="js/scripts.js" defer></script>
+  </head>
+
+  <!--Help from lecture source code-->
+  <body>
+    <h1>UserData</h1>
+    <table id="userdata">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Admin</th>
+        </tr>
+      </thead>
+      <tbody id="data">
+        <tr>
+          <td>Taavi</td>
+          <td>taavie@email.com</td>
+          <td>Taavitie 123</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Sirkku100</td>
+          <td>sirkku100@email.com</td>
+          <td>Sirkunkatu 21</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>Silvonen</td>
+          <td>Solvonen@email.com</td>
+          <td>Silvosenplku 3</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Give information</h2>
+
+    <fieldset>
+      <legend>Information</legend>
+      <label for="input-username">Username:</label>
+      <input
+        type="text"
+        name="input-username"
+        id="input-username"
+        placeholder="Username"
+      />
+      <br />
+      <label for="input-email">Email:</label>
+      <input
+        type="text"
+        name="input-email"
+        id="input-email"
+        placeholder="Email"
+      />
+      <br />
+      <label for="input-address">Address:</label>
+      <input
+        type="text"
+        name="input-address"
+        id="input-address"
+        placeholder="Address"
+      />
+      <br />
+      <label for="input-admin">Admin:</label>
+      <input
+        type="checkbox"
+        name="input-admin"
+        id="input-admin"
+        placeholder="Admin"
+      />
+    </fieldset>
+    <button id="submit-data">Submit</button>
+  </body>
+</html>
