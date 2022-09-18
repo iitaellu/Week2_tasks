@@ -71,7 +71,6 @@ addImage.addEventListener("click", function () {
   img.setAttribute("src", src); //Help from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_img_create
   img.setAttribute("width", "64");
   img.setAttribute("height", "64");
-  console.log(img);
 
   for (var r = 0; r < count; r++) {
     if (document.getElementById("data").rows[r].cells[0].innerHTML === user) {
