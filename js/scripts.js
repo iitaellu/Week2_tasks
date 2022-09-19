@@ -27,6 +27,7 @@ submitButton.addEventListener("click", function () {
     //How many rows are there
     var table = document.getElementById("userdata");
     var count = table.tBodies[0].rows.length;
+    var exists = 0;
     //Check if username is used already
     for (var r = 0; r < count; r++) {
       //help from https://www.w3schools.com/jsref/coll_table_rows.asp
@@ -38,14 +39,16 @@ submitButton.addEventListener("click", function () {
         document.getElementById("input-username").value = "";
         document.getElementById("input-email").value = "";
         document.getElementById("input-address").value = "";
+        exists = 1;
         return;
-      } else {
-        newRow.append(newuser, newemail, newaddress, newadmin);
-        document.getElementById("data").appendChild(newRow);
-        document.getElementById("input-username").value = "";
-        document.getElementById("input-email").value = "";
-        document.getElementById("input-address").value = "";
       }
+    }
+    if (exists === 0) {
+      newRow.append(newuser, newemail, newaddress, newadmin);
+      document.getElementById("data").appendChild(newRow);
+      document.getElementById("input-username").value = "";
+      document.getElementById("input-email").value = "";
+      document.getElementById("input-address").value = "";
     }
   }
 });
